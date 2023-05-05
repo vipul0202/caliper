@@ -56,8 +56,8 @@ export default function Table({ onEditClick }) {
       );
     })
     .sort((a, b) => {
-      const aValue = vehicleList[a][sortColumn];
-      const bValue = vehicleList[b][sortColumn];
+      let aValue = vehicleList[a][sortColumn];
+      let bValue = vehicleList[b][sortColumn];
       if (sortColumn == "grace" || sortColumn == "amount") {
         aValue = Number(aValue);
         bValue = Number(bValue);
