@@ -58,6 +58,11 @@ export default function Table({ onEditClick }) {
     .sort((a, b) => {
       const aValue = vehicleList[a][sortColumn];
       const bValue = vehicleList[b][sortColumn];
+      if (sortColumn == "grace" || sortColumn == "amount") {
+        aValue = Number(aValue);
+        bValue = Number(bValue);
+      }
+
       if (aValue < bValue) {
         return sortDirection === 'asc' ? -1 : 1;
       } else if (aValue > bValue) {
@@ -91,7 +96,7 @@ export default function Table({ onEditClick }) {
       <table className="table table-striped table-bordered">
         <thead>
           <tr>
-            <th scope="col" onClick={() => handleSort('vehicleType')}>
+            <th scope="col" onClick={() => handleSort('type')}>
               Vehicle Type{' '}
               {sortColumn === 'vehicleType' &&
                 (sortDirection === 'asc' ? '↑' : '↓')}
