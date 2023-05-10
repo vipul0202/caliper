@@ -1,6 +1,6 @@
 #Note
  - To sort table, click on any column heading to sort in ascending or descending order.
- - To search based on any column, jsut type in search bar.
+ - To search based on any column, just type in search bar.
  
 
 ## Available Scripts
